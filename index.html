@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Home Page">
+    <meta name="keywords" content="grocery, home">
+    <meta name="author" content="Pookie">
+    <link href="styles/styleforhome.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <title>Home | GotoGro</title>
+</head>
+
+<body>
+    <div class="background-img" style="background-image: url('styles/images/background.jpg');"></div>
+
+    <!-- Sidebar Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="styles/images/logo.png" alt="GotoGro Logo" class="logo">
+                <a href="index.html" class="nav-title">GotoGro-MRMS</a>
+            </div>
+            <div class="nav-links">
+                <a href="data.php"><img src="styles/images/analytics.png">Dashboard</a>
+                <a href="members.php"><img src="styles/images/members.png">Members</a>
+                <a href="inventory.php"><img src="styles/images/inventory.png">Inventory</a>
+                <a href="sales.php"><img src="styles/images/sales.png">Sales</a>
+                <a href="report.php"><img src="styles/images/report.png">Report</a>
+                <a href="notification.php"><img src="styles/images/notification.png">Notifications</a>
+                <a href="account.php"><img src="styles/images/account.png">Account</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="content">
+            <h1>Welcome to GotoGro Management System</h1>
+            <p>Your all-in-one platform for efficiently managing grocery store memberships and sales records.</p>
+
+            <section id="button">
+                <a href="javascript:void(0);" id="start-now">Start Now</a>
+            </section>
+        </section>
+
+        <!-- Features Content -->
+        <section class="features hidden" id="key-features">
+            <h2>Key Features</h2>
+            <div class="feature-container">
+                <div class="feature-box">
+                    <h3>Member Management</h3>
+                    <p>Effortlessly add, update, and manage member profiles and details.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>Inventory Control</h3>
+                    <p>Keep track of stock levels and manage product availability seamlessly.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>Sales Tracking</h3>
+                    <p>Monitor and analyze sales records to enhance performance and customer satisfaction.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>Reports & Analytics</h3>
+                    <p>Generate reports to gain insights into member activities and store performance.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&#169; 2024 GotoGro by Pookie</p>
+    </footer>
+
+    <script src="javascript/home.js"></script>
+</body>
+</html>
