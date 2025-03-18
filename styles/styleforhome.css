@@ -1,0 +1,234 @@
+/* General reset for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body element styling */
+body {
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Background image styling */
+.background-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 0.8;
+    filter: blur(7px);
+    z-index: -1;
+}
+
+/* Sidebar (header) styling */
+header {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 150px;
+    display: flex;
+    padding: 20px;
+    position: fixed;
+    align-items: center;
+    flex-direction: column;
+    background-color: #5a7d54;
+    border-right: 2px solid #ccc;
+}
+
+/* Navbar and logo styles */
+.navbar {
+    width: 100%;
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 30px; 
+    height: auto; 
+    margin-bottom: 2px; 
+}
+
+/* Navigation title and hover effect */
+.nav-title {
+    color: #fff;
+    display: block; 
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
+
+.nav-title:hover {
+    color: #FF885B;
+}
+
+/* Navigation links with hover effect */
+.nav-links {
+    width: 100%;
+}
+
+/* Navigation links with flex for inline alignment */
+.nav-links a {
+    padding: 12px;
+    display: flex;
+    color: white;
+    font-size: 12px;
+    line-height: 1.2; 
+    margin-bottom: 18px;
+    align-items: center; 
+    text-decoration: none;
+    justify-content: flex-start; 
+}
+
+.nav-links a:hover {
+    color: white; 
+    border-radius: 5px;
+    background-color: #476d40;
+}
+
+/* Adjust image style for better alignment */
+.nav-links img {
+    width: 14px;
+    height: 13px;
+    filter: invert(1);
+    margin-right: 8px;
+    margin-bottom: 2px;
+}
+
+/* Main content margin */
+main {
+    flex-grow: 1;
+    padding: 40px;
+    margin-left: 140px; 
+}
+
+/* Content section styling */
+.content {
+    padding: 40px;
+    text-align: center;
+}
+
+.content h1 {
+    margin-top: 90px;
+    font-size: 25px;
+    color: #f9f9f9;
+}
+
+.content p {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 200;
+    color: #f9f9f9;
+}
+
+/* Button styling and hover effect */
+#button a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff885b;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 40px;
+    transition: background-color 0.3s ease;
+}
+
+#button a:hover {
+    background-color: white;
+    color: #ff885b;
+}
+
+/* Class to hide elements */
+.hidden {
+    display: none;
+}
+
+/* Fade-in animation for feature boxes */
+.features.show {
+    display: block;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Features section */
+.features {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 25px;
+    margin-bottom: 30px;
+    color: #f9f9f9;
+}
+
+/* Grid layout for feature boxes */
+.feature-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* Feature box styling */
+.feature-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px #ccc;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+/* Hover effect for feature box */
+.feature-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px #ccc;
+}
+
+.feature-box h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #5a7d54;
+}
+
+.feature-box p {
+    font-size: 15px;
+    color: #777;
+}
+
+/* Footer styling */
+footer {
+    bottom: 0;
+    left: 150px; 
+    padding: 10px;
+    color: #666;
+    font-size: 12px;
+    text-align: center;
+    position: relative;
+    background-color: #fff;
+    width: calc(100% - 150px);
+    border-top: 1px solid #ccc;
+}

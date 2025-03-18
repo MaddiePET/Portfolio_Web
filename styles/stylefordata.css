@@ -1,0 +1,308 @@
+/* General reset for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body element styling */
+body {
+    font-family: 'Outfit', sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Sidebar (header) styling */
+header {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 150px;
+    display: flex;
+    padding: 20px;
+    position: fixed;
+    align-items: center;
+    flex-direction: column;
+    background-color: #5a7d54;
+    border-right: 2px solid #ccc;
+}
+
+.topbar {
+    background-color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    top: 0;
+    left: 150px;
+    width: calc(100% - 150px); /* Adjusted for sidebar alignment */
+    border-bottom: 1px solid #ccc;
+    border-right: none;
+    font-size: 14px;
+    color: #666;
+    height: 45px;
+}
+
+.profile-logout-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Pushes the container to the right */
+    height: 40px;
+    margin-top: -3px;
+}
+
+.profile-picture {
+    display: flex;
+    align-items: center;
+}
+
+.profile-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 5px;
+    object-fit: cover; 
+    transition: all 0.3s ease;
+}
+
+.greeting {
+    font-size: 14px;
+    color: #333;
+    margin-right: 10px;
+}
+
+.btn-logout {
+    display: flex;
+    align-items: center;
+    padding: 6px 10px;
+    height: 30px; /* Matches the profile picture height */
+    background-color: #ff885b;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 13px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-logout:hover {
+    background-color: #e6764a;
+}
+
+/* Navbar and logo styles */
+.navbar {
+    width: 100%;
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 30px; 
+    height: auto; 
+    margin-bottom: 2px; 
+}
+
+/* Navigation title and hover effect */
+.nav-title {
+    color: #fff;
+    display: block; 
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
+
+.nav-title:hover {
+    color: #FF885B;
+}
+
+/* Navigation links with hover effect */
+.nav-links {
+    width: 100%;
+}
+
+/* Navigation links with flex for inline alignment */
+.nav-links a {
+    padding: 12px;
+    display: flex;
+    color: white;
+    font-size: 12px;
+    line-height: 1.2; 
+    margin-bottom: 18px;
+    align-items: center; 
+    text-decoration: none;
+    justify-content: flex-start; 
+}
+
+.nav-links a:hover {
+    color: white; 
+    border-radius: 5px;
+    background-color: #476d40;
+}
+
+/* Adjust image style for better alignment */
+.nav-links img {
+    width: 14px;
+    height: 13px;
+    filter: invert(1);
+    margin-right: 8px;
+    margin-bottom: 2px;
+}
+
+/* Main content margin */
+main {
+    flex-grow: 1;
+    padding: 40px;
+    margin-left: 140px; 
+}
+
+.data-dashboard h1,
+.filter-section h1 {
+    font-size: 25px;
+    color: #33372C;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Filter section */
+.filter-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.filter-container select,
+.filter-container input {
+    padding: 8px 8px;
+    font-size: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #ffffff;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Focus effect for inputs and selects */
+.filter-container input:focus,
+.filter-container select:focus {
+    outline: none; 
+    border-color: #FF665A;
+    background-color: #fff;
+}
+
+.feature-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+/* Feature Box */
+.feature-box {
+    background-color: #fff;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.feature-box:hover {
+    transform: scale(1.05);
+}
+
+.feature-box h3 {
+    font-size: 15px;
+    color: #FF885B;
+    margin-bottom: 10px;
+}
+
+.feature-box p {
+    font-size: 15px;
+    color: #33372C;
+    margin-bottom: 10px;
+}
+
+/* Charts Container */
+.charts-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 40px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Chart Styling */
+.chart {
+    width: 100%;
+    max-width: 450px; /* Ensure charts are of equal size */
+    height: 400px; /* Set equal height for both charts */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sales-chart {
+    width: 100%;
+    margin-left: 15%;
+    margin-bottom: 30px;
+    max-width: 700px; /* Ensure charts are of equal size */
+    height: 400px; /* Set equal height for both charts */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Additional spacing for the Monthly Performance section */
+.filter-section {
+    margin-top: 40px;
+    text-align: center;
+}
+
+/* Cards Container */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 10px;
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+/* New Member and Stock-In Cards */
+.new-member-card, .stock-in-card {
+    background-color: #fff;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Outfit', sans-serif;
+    color: #33372C;
+}
+
+/* Footer styling */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 150px;
+    width: calc(100% - 150px);
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+    color: #666;
+    font-size: 12px;
+    border-top: 1px solid #ccc;
+}

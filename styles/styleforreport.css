@@ -1,0 +1,309 @@
+/* General reset for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body element styling */
+body {
+    font-family: 'Outfit', sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Sidebar (header) styling */
+header {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 150px;
+    display: flex;
+    padding: 20px;
+    position: fixed;
+    align-items: center;
+    flex-direction: column;
+    background-color: #5a7d54;
+    border-right: 2px solid #ccc;
+}
+
+.topbar {
+    background-color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    top: 0;
+    left: 150px;
+    width: calc(100% - 150px); /* Adjusted for sidebar alignment */
+    border-bottom: 1px solid #ccc;
+    border-right: none;
+    font-size: 14px;
+    color: #666;
+    height: 45px;
+}
+
+
+.profile-logout-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Pushes the container to the right */
+    height: 40px;
+    margin-top: -3px;
+}
+
+.profile-picture {
+    display: flex;
+    align-items: center;
+}
+
+.profile-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 5px;
+    object-fit: cover; 
+    transition: all 0.3s ease;
+}
+
+.greeting {
+    font-size: 14px;
+    color: #333;
+    margin-right: 10px;
+}
+
+.btn-logout {
+    display: flex;
+    align-items: center;
+    padding: 6px 10px;
+    height: 30px; /* Matches the profile picture height */
+    background-color: #ff885b;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 13px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-logout:hover {
+    background-color: #e6764a;
+}
+
+/* Navbar and logo styles */
+.navbar {
+    width: 100%;
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 30px; 
+    height: auto; 
+    margin-bottom: 2px; 
+}
+
+/* Navigation title and hover effect */
+.nav-title {
+    color: #fff;
+    display: block; 
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
+
+.nav-title:hover {
+    color: #FF885B;
+}
+
+/* Navigation links with hover effect */
+.nav-links {
+    width: 100%;
+}
+
+/* Navigation links with flex for inline alignment */
+.nav-links a {
+    padding: 12px;
+    display: flex;
+    color: white;
+    font-size: 12px;
+    line-height: 1.2; 
+    margin-bottom: 18px;
+    align-items: center; 
+    text-decoration: none;
+    justify-content: flex-start; 
+}
+
+.nav-links a:hover {
+    color: white; 
+    border-radius: 5px;
+    background-color: #476d40;
+}
+
+/* Adjust image style for better alignment */
+.nav-links img {
+    width: 14px;
+    height: 13px;
+    filter: invert(1);
+    margin-right: 8px;
+    margin-bottom: 2px;
+}
+
+/* Main content margin */
+main {
+    flex-grow: 1;
+    padding: 40px;
+    margin-left: 140px; 
+}
+
+.report {
+    display: flex; 
+    align-items: center;
+    justify-content: center;  
+    flex-direction: column; 
+}
+
+/* Styling for the sales transaction heading */
+.report h1 {
+    font-size: 25px;  
+    color: #33372C; 
+    text-align: center; 
+    margin-bottom: 20px;
+}
+
+/* Form container */
+.report-form {
+    width: 100%;
+    margin: auto;
+    padding: 40px;
+    max-width: 600px;  
+    background-color: #fefefe; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.report-form p {
+    margin-bottom: 10px;
+}
+
+/* Form labels */
+.report-form label {
+    font-size: 13px;
+}
+
+/* Input fields and select styling */
+.report-form input,
+.report-form select {
+    width: 100%;
+    font-size: 12px;
+    margin-top: 5px;
+    padding: 8px 8px;
+    border-radius: 5px;
+    margin-bottom: 7px;
+    border: 1px solid #ddd;
+    background-color: #ffffff; 
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.report-form input:focus,
+.report-form select:focus {
+    outline: none; 
+    border-color: #FF665A;
+    background-color: #fff;
+}
+
+/* Styling for the OK button */
+.export-button {
+    width: 100%;
+    padding: 9px;
+    border: none;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px; 
+    background-color: #749c6d; 
+}
+
+/* Hover effect for the OK button */
+.export-button:hover {
+    background-color: #476d40; 
+    transition: all 0.3s ease-in-out; 
+}
+
+/* Error message styling */
+.form-container .error-message {
+    color: #ff885b;
+    font-size: 0.85em;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+/* Container for all checkboxes */
+#checkboxes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 1px;
+}
+
+/* Styling individual checkbox items */
+.checkbox-item {
+    display: flex;
+}
+
+/* Styling the checkbox labels */
+.checkbox-item label {
+    font-size: 13px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Styling the checkboxes */
+.checkbox-item input[type="checkbox"] {
+    margin-right: 10px;
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+/* Checked state styling */
+.checkbox-item input[type="checkbox"]:checked {
+    background-color: #749c6d;
+    border: 1px solid #749c6d;
+    position: relative;
+}
+
+/* Custom checkmark styling when checked */
+.checkbox-item input[type="checkbox"]:checked::after {
+    content: "✔";
+    color: white;
+    font-size: 12px;
+    position: absolute;
+    left: 3px;
+    top: 0px;
+}
+
+/* Footer styling */
+footer {
+    bottom: 0;
+    left: 150px; 
+    padding: 10px;
+    color: #666;
+    font-size: 12px;
+    text-align: center;
+    position: relative;
+    background-color: #fff;
+    width: calc(100% - 150px);
+    border-top: 1px solid #ccc;
+}

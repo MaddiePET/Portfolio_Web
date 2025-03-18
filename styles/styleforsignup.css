@@ -1,0 +1,180 @@
+/* General reset for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Outfit', sans-serif;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(50deg, #FF885B, #557C56);
+}
+
+/* Container styling */
+.signup-form {
+    background-color: #fefefe; 
+    padding: 40px; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px; 
+    margin: auto;
+}
+
+/* Logo styling */
+.logo {
+    width: 35px;
+    display: block;
+    margin: 0 auto;
+    margin-top: -20px; 
+}
+
+/* Title styling */
+.signup-form h1 {
+    font-size: 16px;
+    color: #33372C;
+    text-align: center;
+}
+
+.signup-form p {
+    font-size: 13px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    color: #33372C;
+    text-align: center;
+}
+
+/* Form sections styling */
+.form-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Input styling */
+.form-section label {
+    font-size: 13px;
+}
+
+.form-section input {
+    width: 100%;
+    padding: 8px 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 12px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    background-color: #ffffff; 
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.form-section input[type="date"] {
+    padding: 7px 7px;
+}
+
+.form-section input:focus {
+    border-color: #FF665A;
+    outline: none;
+}
+
+/* Button styling */
+.button-container {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.btn {
+    width: 46%;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 12px; 
+    border: none;
+    cursor: pointer;
+    margin-top: 5px;
+    color: white;
+}
+
+.signup-button {
+    background-color: #749c6d;
+}
+
+.signup-button:hover {
+    background-color: #476d40;
+    transition: all 0.3s ease-in-out;
+}
+
+.clear-button {
+    background-color: #e85957;
+}
+
+.clear-button:hover {
+    background-color: #d33e3b;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Footer link styling */
+.login-link {
+    font-size: 12px;
+    margin-top: 15px;
+}
+
+.login-link a {
+    color: #FF885B;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Notifications styling */
+.notification,
+.error-messages, 
+.errors {
+    position: fixed;
+    top: 10px;
+    left: 50%; 
+    transform: translate(-50%, 0); 
+    padding: 15px 25px;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 5px; 
+    font-size: 13px; 
+    z-index: 9999; 
+    opacity: 1; 
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* Optional: Class for hiding the notification */
+.notification.hide,
+.error-messages.hide,
+.errors.hide {
+    opacity: 0;
+    transform: translate(-50%, -20px); /* Optional slide up effect */
+}
+
+.notification {
+    color: #749c6d;
+}
+/* Error messages styling */
+.error-messages {
+    display: none;
+    color: #e85957;
+}
+
+.errors {
+    color: #e85957;
+}
+
+/* Footer styling */
+.footer p {
+    font-size: 11px;
+    color: #666;
+    margin-top: -10px;
+}

@@ -1,0 +1,619 @@
+/* General reset for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body element styling */
+body {
+    font-family: 'Outfit', sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Sidebar (header) styling */
+header {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 150px;
+    display: flex;
+    padding: 20px;
+    position: fixed;
+    align-items: center;
+    flex-direction: column;
+    background-color: #5a7d54;
+    border-right: 2px solid #ccc;
+}
+
+.topbar {
+    background-color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    top: 0;
+    left: 150px;
+    width: calc(100% - 150px); /* Adjusted for sidebar alignment */
+    border-bottom: 1px solid #ccc;
+    border-right: none;
+    font-size: 14px;
+    color: #666;
+    height: 45px;
+}
+
+.profile-logout-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Pushes the container to the right */
+    height: 40px;
+    margin-top: -3px;
+}
+
+.profile-picture {
+    display: flex;
+    align-items: center;
+}
+
+.profile-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 5px;
+    object-fit: cover; 
+    transition: all 0.3s ease;
+}
+
+.greeting {
+    font-size: 14px;
+    color: #333;
+    margin-right: 10px;
+}
+
+.btn-logout {
+    display: flex;
+    align-items: center;
+    padding: 6px 10px;
+    height: 30px; /* Matches the profile picture height */
+    background-color: #ff885b;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 13px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-logout:hover {
+    background-color: #e6764a;
+}
+
+/* Navbar and logo styles */
+.navbar {
+    width: 100%;
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 30px; 
+    height: auto; 
+    margin-bottom: 2px; 
+}
+
+/* Navigation title and hover effect */
+.nav-title {
+    color: #fff;
+    display: block; 
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
+
+.nav-title:hover {
+    color: #FF885B;
+}
+
+/* Navigation links with hover effect */
+.nav-links {
+    width: 100%;
+}
+
+/* Navigation links with flex for inline alignment */
+.nav-links a {
+    padding: 12px;
+    display: flex;
+    color: white;
+    font-size: 12px;
+    line-height: 1.2; 
+    margin-bottom: 18px;
+    align-items: center; 
+    text-decoration: none;
+    justify-content: flex-start; 
+}
+
+.nav-links a:hover {
+    color: white; 
+    border-radius: 5px;
+    background-color: #476d40;
+}
+
+/* Adjust image style for better alignment */
+.nav-links img {
+    width: 14px;
+    height: 13px;
+    filter: invert(1);
+    margin-right: 8px;
+    margin-bottom: 2px;
+}
+
+/* Main content margin */
+main {
+    flex-grow: 1;
+    padding: 40px;
+    margin-left: 140px; 
+}
+
+/* Inventory dashboard styling */
+.inventory-dashboard h1 {
+    font-size: 25px;
+    color: #33372C;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Search bar and filter styling */
+.search-bar {
+    width: 200px;
+    font-size: 12px;
+    padding: 9px;
+    margin-right: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Search bar focus effect */
+.search-bar:focus {
+    outline: none;
+    border-color: #FF665A;
+    background-color: #fff;
+}
+
+.sidebar h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Filter Options */
+.filter-options label {
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.filter-options h3 {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #FF885B;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+/* Custom checkbox appearance */
+.checkbox-item input[type="checkbox"] {
+    margin-right: 10px;
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.checkbox-item input[type="checkbox"]:checked {
+    background-color: #749c6d;
+    border: 1px solid #749c6d;
+    position: relative;
+}
+
+/* Checkmark style */
+.checkbox-item input[type="checkbox"]:checked::after {
+    content: "✔";
+    color: white;
+    font-size: 9px;
+    position: absolute;
+    left: 3px;
+}
+
+/* Sidebar styling */
+.sidebar {
+    top: 0;
+    width: 240px;
+    height: 100%;
+    right: -300px;
+    padding: 20px;
+    z-index: 1000;
+    position: fixed; 
+    overflow-y: auto;
+    background-color: #fff;
+    transition: right 0.3s ease;
+    box-shadow: 0 4px 8px #0000004d;
+}
+
+.sidebar-active {
+    right: 0;
+}
+
+/* Product cards styling */
+.product-cards {
+    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+}
+
+/* Individual product card styling */
+.product-card {
+    width: 200px; 
+    height: 200px; 
+    padding: 15px;
+    border-radius: 15px;
+    background-color: #fff;
+    transition: transform 0.2s; 
+    box-shadow: 0 4px 8px #0000004d;
+}
+
+.product-card:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 8px 16px #0000004d; 
+}
+
+.product-card h3 {
+    font-size: 17px;
+    color: #FF885B;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+/* Adjusted card buttons alignment */
+.card-button {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-evenly; 
+}
+
+/* Card buttons styling */
+.btn {
+    margin: 5px;  
+    border: none;
+    cursor: pointer;
+    padding: 8px 10px;
+    border-radius: 5px;
+    background-color: #ececec;
+}
+
+.btn img {
+    width: 14px; 
+    height: 14px;
+}
+
+/* Hover effect for add and view buttons */
+.btn:hover {
+    transform: scale(1.05); 
+    background-color: #749c6d; 
+}
+
+/* Make image bigger on button hover */
+.btn:hover img {
+    filter: invert(1);
+    transform: scale(1.2);
+    transition: transform 0.2s;
+}
+
+/* Add Member Button Container */
+.filter-button,
+.add-button {
+    background-color: #749c6d;
+    border-radius: 5px;
+    border: none;
+    font-size: 12px;
+    padding: 9px 12px;
+    color: white;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.filter-button:hover,
+.add-button:hover {
+    transform: scale(1.05);
+    background-color: #476d40;
+}
+
+.filter-button img,
+.add-button img {
+    width: 17px;
+    height: 12px;
+    filter: invert(1);
+    padding-right: 5px;
+}
+
+/* Form container */
+.form {
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    display: none; 
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Form box styling */
+.add-form,
+.update-form,
+.delete-form,
+.view-form {
+    width: 100%;
+    display: flex;
+    padding: 25px;
+    max-width: 350px;
+    position: relative;
+    align-items: center; 
+    flex-direction: column;
+    background-color: #fefefe;
+    animation: slideDown 0.3s ease-out;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Form title */
+.add-form h2,
+.update-form h2,
+.view-form h2,
+.delete-form h2 {
+    font-size: 17px;
+    color: #33372C;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Input label styling */
+.add-form label,
+.update-form label {
+    font-size: 12px;
+}
+
+/* Input fields styling */
+.add-form input,
+.update-form input {
+    width: 100%;
+    font-size: 12px;
+    margin-top: 5px;
+    padding: 7px 7px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    background-color: #ffffff; 
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Add input fields focus effect */
+.add-form input:focus,
+.update-form input:focus {
+    outline: none;
+    border-color: #FF665A;
+    background-color: #fff;
+}
+
+/* Dropdown styling for the category select box */
+.add-form select#category {
+    width: 100%;
+    font-size: 12px;
+    margin-top: 5px;
+    padding: 7px 7px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    background-color: #ffffff; 
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Focus effect for dropdown to match the input fields */
+.add-form select#category:focus {
+    outline: none;
+    border-color: #FF665A;
+    background-color: #fff; 
+}
+
+/* Table styles */
+#viewFormTable {
+    width: 100%; 
+    margin-top: 20px;
+    border-collapse: collapse;  
+}
+
+/* Table header styles */
+#viewFormTable th {
+    padding: 8px;  
+    font-size: 14px;
+    text-align: left;
+    color: #33372C;
+    border: 2px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+/* Table cell styles */
+#viewFormTable td {
+    padding: 8px; 
+    font-size: 12px;
+    border: 2px solid #ddd;
+}
+
+/* View paragraph styling */
+.delete-form p {
+    margin: 15px 0;
+    font-size: 14px;
+}
+
+/* Close button styling*/
+.close-button {
+    top: 5px;
+    right: 18px;
+    padding: 5px;
+    color: #ccc;
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    transition: color 0.2s;
+}
+
+/* Hover effect for close button */
+.close-button:hover {
+    color: #e85957;
+}
+
+.but {
+    padding: 10px 12px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    justify-content: flex-end;
+    transition: background-color 0.3s;
+}
+
+/* Add, update and delete buttons styling */
+.ad-button,
+.up-button,
+.del-button,
+.apply-button {
+    background-color: #749c6d;
+}
+
+/* Hover effect for add, update and delete buttons */
+.ad-button:hover,
+.up-button:hover,
+.del-button:hover,
+.apply-button:hover {
+    background-color: #476d40; 
+    transition: all 0.3s ease-in-out; 
+}
+
+.cancel-button,
+.clear-filter {
+    background-color: #e85957;
+}
+
+/* Hover effect for clear and cancel buttons */
+.cancel-button:hover,
+.clear-filter:hover {
+    background-color: #d33e3b;
+    transition: all 0.3s ease-in-out; 
+}
+
+/* Animation for the forms */
+@keyframes slideDown {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Notifications styling */
+.notification {
+    top: 10px;
+    left: 56%;
+    opacity: 1; 
+    z-index: 9999;
+    position: fixed; 
+    font-size: 13px; 
+    color: #749c6d;
+    border-radius: 5px;
+    padding: 15px 25px;
+    background-color: white;
+    transform: translate(-50%, 0); 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);  
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* Optional: Class for hiding the notification */
+.notification.hide {
+    opacity: 0;
+    transform: translate(-50%, -20px);
+}
+
+/* Notifications styling */
+.error-message {
+    top: 10px;
+    left: 56%;
+    opacity: 1; 
+    z-index: 9999;
+    position: fixed; 
+    font-size: 13px; 
+    color: #e85957;
+    border-radius: 5px;
+    padding: 15px 25px;
+    background-color: white;
+    transform: translate(-50%, 0); 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);  
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* Optional: Class for hiding the notification */
+.error-message.hide {
+    opacity: 0;
+    transform: translate(-50%, -20px);
+}
+
+/* Footer styling */
+footer {
+    bottom: 0;
+    left: 150px; 
+    padding: 10px;
+    color: #666;
+    font-size: 12px;
+    text-align: center;
+    position: relative;
+    background-color: #fff;
+    width: calc(100% - 150px);
+    border-top: 1px solid #ccc;
+}
+
+@keyframes blink {
+    0%, 100% { box-shadow: 0 0 10px 4px red; } /* Red glow at the start and end */
+    50% { box-shadow: none; } /* No shadow halfway through */
+}
+
+.product-card.highlighted, .notification.highlighted {
+    animation: blink 1s infinite; /* 1-second duration, repeating infinitely */
+}

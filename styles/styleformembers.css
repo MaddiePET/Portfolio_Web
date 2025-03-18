@@ -1,0 +1,615 @@
+/* General reset for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body element styling */
+body {
+    font-family: 'Outfit', sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Sidebar (header) styling */
+header {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 150px;
+    display: flex;
+    padding: 20px;
+    position: fixed;
+    align-items: center;
+    flex-direction: column;
+    background-color: #5a7d54;
+    border-right: 2px solid #ccc;
+}
+
+.topbar {
+    background-color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    top: 0;
+    left: 150px;
+    width: calc(100% - 150px); /* Adjusted for sidebar alignment */
+    border-bottom: 1px solid #ccc;
+    border-right: none;
+    font-size: 14px;
+    color: #666;
+    height: 45px;
+}
+
+
+.profile-logout-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Pushes the container to the right */
+    height: 40px;
+    margin-top: -3px;
+}
+
+.profile-picture {
+    display: flex;
+    align-items: center;
+}
+
+.profile-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 5px;
+    object-fit: cover; 
+    transition: all 0.3s ease;
+}
+
+.greeting {
+    font-size: 14px;
+    color: #333;
+    margin-right: 10px;
+}
+
+.btn-logout {
+    display: flex;
+    align-items: center;
+    padding: 6px 10px;
+    height: 30px; /* Matches the profile picture height */
+    background-color: #ff885b;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 13px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-logout:hover {
+    background-color: #e6764a;
+}
+
+/* Navbar and logo styles */
+.navbar {
+    width: 100%;
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 30px; 
+    height: auto; 
+    margin-bottom: 2px; 
+}
+
+/* Navigation title and hover effect */
+.nav-title {
+    color: #fff;
+    display: block; 
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
+
+.nav-title:hover {
+    color: #FF885B;
+}
+
+/* Navigation links with hover effect */
+.nav-links {
+    width: 100%;
+}
+
+/* Navigation links with flex for inline alignment */
+.nav-links a {
+    padding: 12px;
+    display: flex;
+    color: white;
+    font-size: 12px;
+    line-height: 1.2; 
+    margin-bottom: 18px;
+    align-items: center; 
+    text-decoration: none;
+    justify-content: flex-start; 
+}
+
+.nav-links a:hover {
+    color: white; 
+    border-radius: 5px;
+    background-color: #476d40;
+}
+
+/* Adjust image style for better alignment */
+.nav-links img {
+    width: 14px;
+    height: 13px;
+    filter: invert(1);
+    margin-right: 8px;
+    margin-bottom: 2px;
+}
+
+/* Main content margin */
+main {
+    flex-grow: 1;
+    padding: 40px;
+    margin-left: 140px; 
+}
+
+.member-profiles h1 {
+    font-size: 25px;
+    color: #33372C;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.input-with-button {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    flex-grow: 1; 
+    max-width: 220px;
+}
+
+#searchType {
+    border: none;
+    padding: 11px 8px;
+    font-size: 12px;
+    outline: none;
+    flex-grow: 1;
+    background-color: #749c6d; 
+    color: white; 
+    text-align: center; 
+    appearance: none;
+    width: auto;
+    cursor: pointer;
+}
+
+#searchInput {
+    border: none;
+    padding: 10px 8px;
+    font-size: 12px;
+    outline: none;
+    flex-grow: 1;
+    width: 100%; /* Ensures input takes up remaining space */
+    box-sizing: border-box; 
+}
+
+.search-button {
+    background: none;
+    border: none;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.search-button img {
+    height: 14px;
+    width: 14px;
+    opacity: 0.6;
+}
+
+/* Add Member Button Container */
+.add-member {
+    background-color: #749c6d;
+    border-radius: 5px;
+    border: none;
+    font-size: 12px;
+    padding: 8px 8px;
+    color: white;
+    cursor: pointer;
+}
+
+.add-member:hover {
+    transform: scale(1.05);
+    background-color: #476d40;
+}
+
+.add-member img {
+    width: 17px;
+    height: 12px;
+    filter: invert(1);
+    padding-right: 5px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto; 
+    margin-left: 5px;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    overflow: hidden;
+    box-shadow: 0 8px 20px #0000004d;
+}
+
+th, td {
+    padding: 6px 12px;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ccc;
+    font-size: 11px; 
+}
+
+thead {
+    background-color: #ff885b; 
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px; 
+}
+
+/* Center-align buttons in table cells */
+td {
+    padding: 6px 12px;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ccc;
+    text-align: center; /* Center-aligns content horizontally */
+    vertical-align: middle; /* Aligns content vertically */
+    font-size: 11px; 
+}
+
+/* Ensure buttons align well and maintain consistent spacing */
+td .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 8px;
+    margin: 0 4px;
+}
+
+.btn {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn img {
+    width: 12px; 
+    height: 12px;
+}
+
+/* Hover effect for add and view buttons */
+.btn:hover {
+    background-color: #749c6d; 
+    transform: scale(1.05); 
+}
+
+/* Make image bigger on button hover */
+.btn:hover img {
+    transform: scale(1.2);
+    transition: transform 0.2s;
+    filter: invert(1);
+}
+
+tbody tr:hover {
+    background-color: #ddd;
+}
+
+/* Form container */
+.form {
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    display: none; 
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Form box styling */
+.reg-form,
+.update-form {
+    width: 100%;
+    display: flex;
+    padding: 25px;
+    max-width: 420px;
+    max-height: 80vh;
+    overflow-y: scroll;
+    position: relative;
+    align-items: center; 
+    flex-direction: column;
+    background-color: #fefefe;
+    animation: slideDown 0.3s ease-out;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Form title */
+.reg-form h2,
+.update-form h2 {
+    font-size: 17px;
+    color: #33372C;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Input label styling */
+.reg-form label,
+.update-form label {
+    font-size: 12px;
+}
+
+/* Input fields styling */
+.reg-form input,
+.update-form input {
+    width: 100%;
+    font-size: 12px;
+    margin-top: 5px;
+    padding: 7px 7px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    background-color: #ffffff; 
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Add input fields focus effect */
+.reg-form input:focus,
+.update-form input:focus {
+    outline: none;
+    border-color: #FF665A;
+    background-color: #fff;
+}
+
+/* Fieldset styling */
+.reg-form fieldset,
+.update-form fieldset {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 3px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+}
+
+/* Legend styling */
+.reg-form legend,
+.update-form legend {
+    font-size: 12px;
+    padding: 0 10px;
+}
+
+/* Radio group container */
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Hide default radio button */
+.radio-group input[type="radio"] {
+    display: none;
+}
+
+/* Custom radio button styling */
+.radio-group label {
+    position: relative;
+    padding-left: 25px;
+    font-size: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.radio-group label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1.5px solid #ddd;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+.radio-group input[type="radio"]:checked + label::before {
+    border-color: #FF665A;
+    background-color: #FF665A;
+}
+
+.register-button {
+    width: 100%;
+    border: none;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 5px; 
+    background-color: #749c6d;
+}
+
+/* Hover effect for add, update and delete buttons */
+.register-button:hover {
+    background-color: #476d40; 
+    transition: all 0.3s ease-in-out; 
+}
+
+.but {
+    padding: 10px 12px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Basic styling for the radio buttons container */
+.radio-label {
+    display: flex;
+    margin: 5px 0;
+}
+
+/* Hide the default radio buttons */
+.radio-label input {
+    width: 0;
+    height: 0;
+}
+
+/* Custom radio button style */
+.radio-custom {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1.5px solid #ddd; 
+    margin-right: 10px;
+    position: relative;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+/* Inner circle for checked state */
+.radio-custom::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #fff; /* Initially white, will change to orange when checked */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+/* Show the inner circle and make the radio button fully orange when checked */
+.radio-label input:checked + .radio-custom {
+    border-color: #FF665A; /* Orange border when checked */
+    background-color: #FF665A; /* Orange background when checked */
+}
+
+/* Show the inner circle when checked */
+.radio-label input:checked + .radio-custom::after {
+    opacity: 1;
+    background-color: #FF665A; /* Orange inner circle when checked */
+}
+
+
+.update-button {
+    background-color: #749c6d;
+}
+
+/* Hover effect for add, update and delete buttons */
+.update-button:hover {
+    background-color: #476d40; 
+    transition: all 0.3s ease-in-out; 
+}
+
+.cancel-button {
+    background-color: #e85957;
+}
+
+.cancel-button:hover {
+    background-color: #d33e3b;
+    transition: all 0.3s ease-in-out; 
+}
+
+/* Close button styling*/
+.close-button {
+    top: 5px;
+    right: 18px;
+    padding: 5px;
+    color: #ccc;
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    transition: color 0.2s;
+}
+
+/* Hover effect for close button */
+.close-button:hover {
+    color: #e85957;
+}
+
+/* Notifications styling */
+.notification,
+.error-messages, 
+.uperror-messages {
+    position: fixed;
+    top: 10px;
+    left: 56%; 
+    transform: translate(-50%, 0); 
+    padding: 15px 25px;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 5px; 
+    font-size: 13px; 
+    z-index: 9999; 
+    opacity: 1; 
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* Optional: Class for hiding the notification */
+.notification.hide,
+.error-messages.hide,
+.uperror-messages.hide {
+    opacity: 0;
+    transform: translate(-50%, -20px); /* Optional slide up effect */
+}
+
+.notification {
+    color: #749c6d;
+}
+/* Error messages styling */
+.error-messages,
+.uperror-messages {
+    display: none;
+    color: #e85957;
+}
+
+/* Footer styling */
+footer {
+    background-color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    left: 150px; /* Adjusted for sidebar alignment */
+    width: calc(100% - 150px);
+    border-top: 1px solid #ccc;
+    font-size: 12px;
+    color: #666;
+}
